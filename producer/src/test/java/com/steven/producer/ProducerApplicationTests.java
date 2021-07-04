@@ -1,5 +1,6 @@
 package com.steven.producer;
 
+import com.rabbitmq.client.ConnectionFactory;
 import org.junit.jupiter.api.Test;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,11 @@ class ProducerApplicationTests {
         System.out.println(amqpTemplate);
 
         LocalDateTime now = LocalDateTime.now();
+
         amqpTemplate.convertAndSend("mytopic-1",now.toString());
+
+
+
     }
 
 }
