@@ -1,2 +1,16 @@
-package com.steven.producer.config;public class WorkQueueConfiguration {
+package com.steven.producer.config;
+
+
+import org.springframework.amqp.core.Queue;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class WorkQueueConfiguration {
+
+    @Bean
+    Queue workQueue(){
+        return new Queue("workQueue");
+    }
+
 }

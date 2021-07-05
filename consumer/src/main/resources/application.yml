@@ -1,6 +1,6 @@
 
 server:
-  port: 8800
+  port: 8801
 
 spring:
   rabbitmq:
@@ -9,3 +9,8 @@ spring:
     virtual-host: /
     username: guest
     password: guest
+    listener:
+      simple:
+        acknowledge-mode: manual #开启ack,消费者接受到消息手动确认
+        retry:
+          max-attempts: 3

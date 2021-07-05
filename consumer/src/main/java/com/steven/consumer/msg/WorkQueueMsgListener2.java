@@ -11,15 +11,10 @@ import java.io.IOException;
 
 @Component
 @Slf4j
+public class WorkQueueMsgListener2 {
 
-public class WorkQueueMsgListener {
 
-    @RabbitListener(queues = "workQueue")
-    public void getMsg1(String msg) throws IOException {
-        log.info("消費者1收到消息：-> "+msg);
-    }
-
-    @RabbitListener(queues = "workQueue")
+//    @RabbitListener(queues = "workQueue")
     public void getMsg2(String msg) throws IOException {
         log.info("消費者2收到消息：-> "+msg);
     }

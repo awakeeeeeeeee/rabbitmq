@@ -1,0 +1,16 @@
+
+
+
+
+server:
+  port: 8800
+
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    virtual-host: /
+    username: guest
+    password: guest
+    publisher-returns: true
+    publisher-confirm: true
